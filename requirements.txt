@@ -1,0 +1,13 @@
+# Install torch separately first (see README, CUDA build for your NVIDIA GPU)
+ultralytics>=8.3
+opencv-python>=4.9
+numpy
+fastapi>=0.110
+uvicorn[standard]
+python-multipart
+pyyaml
+lapx
+matplotlib
+pytest
+httpx
+websockets

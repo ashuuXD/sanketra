@@ -1,0 +1,25 @@
+model:
+  path: auto                # auto = newest models/sanketra_*.pt (your trained model) else yolo11n.pt; or give a file name
+  device: auto              # auto | cpu | cuda:0
+  fp16: false               # FP16 measured on the target RTX 3050: ~3 s stall on every new input shape and NO speed gain (see docs/PERFORMANCE.md)
+  class_filter: null        # e.g. ["stop sign"]; null = keep all classes the model predicts
+inference:
+  imgsz: 640                # allowed in UI: 320, 416, 640
+  conf: 0.25
+  temperature: 1.0          # 1.0 = no calibration; fit with evaluation/calibration_eval.py
+  abstain_below: 0.50       # detections below this are shown as UNCERTAIN
+  fixed_input_shape: false  # true = letterbox every source to one square shape (measured SLOWER on the target laptop; keep false unless bench_gpu.py says otherwise)
+  objects_every: 2          # run the people/vehicle model on every 2nd frame (keeps the previous result in between)
+  tracking: true
+  smoothing: true
+  smoothing_alpha: 0.5
+camera:
+  index: auto              # auto = last working camera, then 0..3 (5 s each). Set a number to force one camera
+stream:
+  overlap: false            # true = encode frame N while inferring N+1 (off: serial, measured faster on the target laptop)
+  max_width: 960
+  jpeg_quality: 70
+events:
+  max_events: 200
+limits:
+  max_upload_mb: 200

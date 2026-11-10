@@ -1,0 +1,46 @@
+# Python / environments
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+
+# Frontend
+node_modules/
+frontend/dist/
+
+# Weights, datasets, results and media: never commit these (licences, size, privacy)
+*.pt
+*.pth
+*.onnx
+*.engine
+weights/
+runs/
+datasets/*
+!datasets/README.md
+!datasets/.gitkeep
+data/uploads/*
+!data/uploads/.gitkeep
+experiments/tmp/
+experiments/results/*
+!experiments/results/.gitkeep
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.zip
+smoke_out.jpg
+
+# Local user data and overrides
+SanketraData/
+config.local.yaml
+sign_registry.local.json
+camera.json
+
+# Editors, OS, logs
+.vscode/
+.idea/
+*.log
+Thumbs.db
+.DS_Store
