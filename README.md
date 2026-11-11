@@ -8,7 +8,7 @@ SANKETRA (*sanket* = sign, *netra* = eye) is an educational research prototype. 
 
 > **Not a safety system.** It is trained on German signs only and must not be used for driving decisions. It does **not** recognise Indian signs (see [Limitations](#limitations)).
 
-![Console](docs/images/console.jpg)
+![SANKETRA home](docs/images/home.png)
 
 ## Features
 - **Live perception console**: video file or webcam, detection, ByteTrack tracking with stable IDs, event timeline with CSV/JSON export. An optional second general model (COCO yolo11n) adds people and vehicles for context; it is never used for sign claims.
